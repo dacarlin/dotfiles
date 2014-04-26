@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>edu.alex.move_in.plist</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/alex/Documents/dotfiles/move_in.bash</string>
+        # bad hard coding
+    </array>
+
+    <key>StartInterval</key>
+    <integer>2592000</integer>
+    # start every month. If computer's asleep start when it wakes up
+</dict>
+</plist>
+
+# Store this file in ~/Library/LaunchAgents
