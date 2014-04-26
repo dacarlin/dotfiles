@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>edu.alex.move_in.plist</string>
+    <string>edu.alex.update_rosetta.plist</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/alex/Documents/dotfiles/move_in.bash</string>
+        <string>/Users/alex/Documents/dotfiles/update_rosetta.bash</string>
         # bad hard coding
     </array>
 
