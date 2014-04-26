@@ -19,7 +19,7 @@ Included
 + .pymolrc
 + cron/launchd scheduler
 + .move_in
-+ 
++ .osx
 
 
 ### We needs
