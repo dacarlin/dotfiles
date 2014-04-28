@@ -5,4 +5,4 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 prompt walters
-alias ls="ls -lhgG --color"
+alias ls="ls -lhgG"
