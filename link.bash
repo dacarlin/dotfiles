@@ -1,13 +1,13 @@
 #!/bin/bash
-mv ~/.bashrc ~/.Trash
-mv ~/.bash_profile ~/.Trash
-mv ~/.vimrc ~/.Trash
-mv ~/.pythonrc ~/.Trash
-mv ~/.pymolrc ~/.Trash
-mv ~/.zshrc ~/.Trash
-ln -s ./.bashrc ~/.bashrc
-ln -s ./.bash_profile ~/.bash_profile
-ln -s ./.vimrc ~/.vimrc
-ln -s ./.pythonrc ~/.pythonrc
-ln -s ./.pymolrc ~/.pymolrc
-ln -s ./.zshrc ~/.zshrc
+rm ~/.bashrc
+rm ~/.bash_profile 
+rm ~/.vimrc 
+rm ~/.pythonrc
+rm ~/.pymolrc 
+rm ~/.zshrc
+ln -s /Users/alex/Documents/dotfiles/.bashrc ~/.bashrc
+ln -s /Users/alex/Documents/dotfiles/.bash_profile ~/.bash_profile
+ln -s /Users/alex/Documents/dotfiles/.vimrc ~/.vimrc
+ln -s /Users/alex/Documents/dotfiles/.pythonrc ~/.pythonrc
+ln -s /Users/alex/Documents/dotfiles/.pymolrc ~/.pymolrc
+ln -s /Users/alex/Documents/dotfiles/.zshrc ~/.zshrc
