@@ -1,11 +1,14 @@
-export PS1='\w\n\$ '
+export PS1='\n\n\w\n\u@\h $ '
 export PYTHONSTARTUP=~/.pythonrc
 
 alias ep="ssh carlin@epiphany.genomecenter.ucdavis.edu"
 alias lab="ssh alex@dhcp28-gc4.genomecenter.ucdavis.edu"
 alias air=""
 
-alias cawk="awk -F', ' " 
+export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
+export ep=carlin@epiphany.genomecenter.ucdavis.edu
+
+alias cawk="gawk -F', ' " 
 alias pymol="open -a MacPyMOL"
 alias ls="ls -lhoFG"
 alias cp="cp -i"
