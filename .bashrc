@@ -1,4 +1,4 @@
-export PS1='\n\n\w\n\u@\h $ '
+export PS1='\n\n\w\n\u@\h$ '
 export PYTHONSTARTUP=~/.pythonrc
 
 alias ep="ssh carlin@epiphany.genomecenter.ucdavis.edu"
