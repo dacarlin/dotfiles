@@ -1,4 +1,5 @@
 export PS1='\n\n\w\n\u@\h$ '
+export PATH=$PATH:/Applications/Rosetta/main/source/bin/
 export PYTHONSTARTUP=~/.pythonrc
 
 alias ep="ssh carlin@epiphany.genomecenter.ucdavis.edu"
