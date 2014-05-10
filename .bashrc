@@ -1,4 +1,4 @@
-export PS1='\n\n\w\n\u@\h$ '
+export PS1='\n\n\w\n\u@\h$'
 export PATH=$PATH:/Applications/Rosetta/main/source/bin/
 export PYTHONSTARTUP=~/.pythonrc
 
