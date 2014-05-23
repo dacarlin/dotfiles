@@ -39,3 +39,6 @@ setlocal spell spelllang=en_us
 
 " Break lines at word boundries 
 set linebreak 
+
+" Save with double tape of Shift-s
+map SS :w<CR>
