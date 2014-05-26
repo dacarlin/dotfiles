@@ -17,3 +17,5 @@ alias ls="ls -lhoFG"
 alias cp="cp -i"
 alias rm="rm -i"
 tr() { mv "$@" ~/.Trash/; }
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
