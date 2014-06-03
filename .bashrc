@@ -6,10 +6,12 @@ source ~/.git-completion.bash
 
 alias ep="ssh carlin@epiphany.genomecenter.ucdavis.edu"
 alias lab="ssh alex@dhcp28-gc4.genomecenter.ucdavis.edu"
+alias otis="ssh carlin@otis.genomecenter.ucdavis.edu"
 alias air="" # a man can dream...
 
 export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
 export ep=carlin@epiphany.genomecenter.ucdavis.edu
+export otis=carlin@otis.genomecenter.ucdavis.edu
 
 alias cawk="gawk -F', ' " 
 alias pymol="open -a MacPyMOL"
