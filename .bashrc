@@ -20,4 +20,4 @@ alias cp="cp -i"
 alias rm="rm -i"
 tr() { mv "$@" ~/.Trash/; }
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-
+alias m2p="python /Applications/Rosetta/main/source/src/python/apps/public/molfile_to_params.py"
