@@ -1,6 +1,7 @@
 export PS1='\[\033[0;37m\]\n\d \t \w\[\033[0m\]\n\u@\h$ '
 #ugly, right? Gives a light gray prompt with date, time, and wd
 export PATH=$PATH:/Applications/Rosetta/main/source/bin/
+db=/Applications/Rosetta/main/database/
 export PYTHONSTARTUP=~/.pythonrc
 source ~/.git-completion.bash
 
@@ -20,4 +21,4 @@ alias cp="cp -i"
 alias rm="rm -i"
 tr() { mv "$@" ~/.Trash/; }
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-
+alias s="git status"
