@@ -1,7 +1,6 @@
 export PS1='\[\033[0;37m\]\n\d \t \w\[\033[0m\]\n\u@\h$ '
 #ugly, right? Gives a light gray prompt with date, time, and wd
-export PATH=$PATH:/Applications/Rosetta/main/source/bin/
-db=/Applications/Rosetta/main/database/
+
 export PYTHONSTARTUP=~/.pythonrc
 source ~/.git-completion.bash
 
@@ -14,7 +13,12 @@ export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
 export ep=carlin@epiphany.genomecenter.ucdavis.edu
 export otis=carlin@otis.genomecenter.ucdavis.edu
 
-alias cawk="gawk -F', ' " 
+export r=/Applications/Rosetta/
+export rbin=$r/main/source/bin/
+export rdb=$r/main/database/
+export rpy=$r/main/source/src/python/apps/public/
+export PATH=$PATH:$rbin:$rpy
+
 alias pymol="open -a MacPyMOL"
 alias ls="ls -lhoFG"
 alias cp="cp -i"
