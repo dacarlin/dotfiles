@@ -1,9 +1,6 @@
 # Save fetched PDBs to the desktop 
 set fetch_path, /Users/alex/Desktop
 
-# Tmalign 
-import tmalign 
-
 # A nice tidy PDB starting point 
 alias clean, remove hydrogens; remove solvent; show sticks, organic
 
