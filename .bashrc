@@ -13,7 +13,10 @@ export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
 export ep=carlin@epiphany.genomecenter.ucdavis.edu
 export otis=carlin@otis.genomecenter.ucdavis.edu
 
-export r=/Applications/Rosetta/
+case "$HOSTNAME" in 
+  epiphany.genomecenter.ucdavis.edu) export r=/home/carlin/Rosetta ;;
+  *) export r=/Applications/Rosetta ;;
+esac 
 export rbin=$r/main/source/bin/
 export rdb=$r/main/database/
 export rpy=$r/main/source/src/python/apps/public/
