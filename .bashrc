@@ -20,7 +20,7 @@ esac
 export rbin=$r/main/source/bin/
 export rdb=$r/main/database/
 export rpy=$r/main/source/src/python/apps/public/
-export PATH=$PATH:$rbin:$rpy
+export PATH=$PATH:$rbin:$rpy:~/bin/ 
 
 alias pymol="open -a MacPyMOL"
 alias ls="ls -lhoFG"
