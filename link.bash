@@ -1,15 +1,15 @@
-#!/bin/bash
-rm ~/.bashrc
-rm ~/.bash_profile 
-rm ~/.vimrc 
-rm ~/.pythonrc
-rm ~/.pymolrc 
-rm ~/.zshrc
-rm ~/.gitignore
-ln -s /Users/alex/Documents/dotfiles/.bashrc ~/.bashrc
-ln -s /Users/alex/Documents/dotfiles/.bash_profile ~/.bash_profile
-ln -s /Users/alex/Documents/dotfiles/.vimrc ~/.vimrc
-ln -s /Users/alex/Documents/dotfiles/.pythonrc ~/.pythonrc
-ln -s /Users/alex/Documents/dotfiles/.pymolrc ~/.pymolrc
-ln -s /Users/alex/Documents/dotfiles/.zshrc ~/.zshrc
-ln -s /Users/alex/Documents/dotfiles/.gitignore ~/.gitignore
+mkdir orig_dotfiles
+mv ~/.bashrc orig_dotfiles/
+mv ~/.bash_profile orig_dotfiles/
+mv ~/.vimrc orig_dotfiles/
+mv ~/.pythonrc orig_dotfiles/
+mv ~/.pymolrc orig_dotfiles/
+mv ~/.gitignore orig_dotfiles/
+mv ~/.gitconfig orig_dotfiles/
+ln -s .bashrc ~/.bashrc
+ln -s .bash_profile ~/.bash_profile
+ln -s .vimrc ~/.vimrc
+ln -s .pythonrc ~/.pythonrc
+ln -s .pymolrc ~/.pymolrc
+ln -s .gitignore ~/.gitignore
+ln -s .gitconfig ~/.gitconfig
