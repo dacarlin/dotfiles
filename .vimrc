@@ -35,7 +35,7 @@ map <silent> <Leader>][ :!python3 %<CR>
 map <silent> <Leader>s :!open -a Safari %<CR><CR>
 
 " Spellcheck (awesome)
-setlocal spell spelllang=en_us
+" setlocal spell spelllang=en_us
 
 " Break lines at word boundries 
 set linebreak 
