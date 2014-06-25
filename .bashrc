@@ -18,8 +18,8 @@ case "$HOSTNAME" in
   *) export r=/Applications/Rosetta ;;
 esac 
 export rbin=$r/main/source/bin/
-export rdb=$r/main/database/
-export rpy=$r/main/source/src/python/apps/public/
+export ROSETTA3_DB=$r/main/database/
+export rpy=$r/main/source/src/python/apps/public
 export PATH=$PATH:$rbin:$rpy:~/bin/ 
 
 alias pymol="open -a MacPyMOL"
