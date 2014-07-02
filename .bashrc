@@ -20,7 +20,6 @@ export rpy=$r/main/source/src/python/apps/public/
 export PATH=$PATH:$rbin:$rpy
 
 alias pymol="open -a MacPyMOL"
-alias ls="ls -lhoFG"
 alias cp="cp -i"
 alias rm="rm -i"
 tr() { mv "$@" ~/.Trash/; }
