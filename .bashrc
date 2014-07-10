@@ -20,7 +20,7 @@ esac
 export rbin=$r/main/source/bin/
 export ROSETTA3_DB=$r/main/database/
 export rpy=$r/main/source/src/python/apps/public
-export PATH=$PATH:$rbin:$rpy:~/bin/ 
+export PATH=/usr/local/bin:$PATH:$rbin:$rpy:~/bin/ 
 
 alias pymol="open -a MacPyMOL"
 alias ls="ls -lhoFG"
