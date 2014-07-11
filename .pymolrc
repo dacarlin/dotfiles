@@ -1,6 +1,9 @@
-set fetch_path, /Users/alex/Desktop
+set fetch_path, /Users/alex/Downloads
 
-alias clean, remove hydrogens; remove solvent; show sticks, organic
+alias clean, \
+  remove hydrogens; \
+  remove solvent; \
+  show sticks, organic
 
 alias spiff, \ 
   set ray_trace_mode, 3; \
@@ -8,11 +11,16 @@ alias spiff, \
   set ray_trace_fog, 0; \
   set ray_shadows, 0; \
   set depth_cue, 0; \ 
-  bg_color white; \
+  bg_color white 
 
 alias showme12, \ 
-set sphere_scale, 0.681 \
-show spheres, organic 
+  sele /////C19 around 12 and /////CA \
+  set sphere_scale, 0.681 \
+  hide spheres \
+  show spheres, sele
 
-
-
+alias showme14, \ 
+  sele /////C19 around 14 and /////CA \
+  set sphere_scale, 0.681 \
+  hide spheres \ 
+  show spheres, sele
