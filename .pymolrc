@@ -1,11 +1,18 @@
-# Save fetched PDBs to the desktop 
 set fetch_path, /Users/alex/Desktop
 
-# A nice tidy PDB starting point 
 alias clean, remove hydrogens; remove solvent; show sticks, organic
 
-# cartoon ray (AKA calvin & hobbes style)
-alias spiff, set ray_trace_mode, 3; set shininess, 0.67; set ray_trace_fog, 0; set ray_shadows, 0; set depth_cue, 0; bg_color white;
+alias spiff, \ 
+  set ray_trace_mode, 3; \
+  set shininess, 0.67; \
+  set ray_trace_fog, 0; \
+  set ray_shadows, 0; \
+  set depth_cue, 0; \ 
+  bg_color white; \
 
-# PyRosetta listener
-# run /Applications/PyRosetta.MacOSX.Lion.64Bit.release-r9/PyMOLPyRosettaServer.py
+alias showme12, \ 
+set sphere_scale, 0.681 \
+show spheres, organic 
+
+
+

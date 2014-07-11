@@ -13,14 +13,14 @@ export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
 export ep=carlin@epiphany.genomecenter.ucdavis.edu
 export otis=carlin@otis.genomecenter.ucdavis.edu
 
-case "$HOSTNAME" in 
-  epiphany.genomecenter.ucdavis.edu) export r=/home/carlin/Rosetta ;;
-  *) export r=/Applications/Rosetta ;;
+case "$( uname )" in 
+  Linux) export r=/home/carlin/Rosetta ;;
+  Darwin) export r=/Applications/Rosetta ;;
 esac 
-export rbin=$r/main/source/bin/
-export ROSETTA3_DB=$r/main/database/
+export rbin=$r/main/source/bin
+export ROSETTA3_DB=$r/main/database
 export rpy=$r/main/source/src/python/apps/public
-export PATH=$PATH:$rbin:$rpy:~/bin/ 
+export PATH=/usr/local/bin:$PATH:$rbin:$rpy:~/bin
 
 alias pymol="open -a MacPyMOL"
 alias cp="cp -i"
