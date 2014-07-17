@@ -8,6 +8,7 @@ alias ep="ssh carlin@epiphany.genomecenter.ucdavis.edu"
 alias lab="ssh alex@dhcp28-gc4.genomecenter.ucdavis.edu"
 alias otis="ssh carlin@otis.genomecenter.ucdavis.edu"
 alias air="" # a man can dream...
+alias q=qstat
 
 export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
 export ep=carlin@epiphany.genomecenter.ucdavis.edu

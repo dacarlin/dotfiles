@@ -1,6 +1,7 @@
 " basic stuff from the web
 set nocompatible
 set autoindent 
+set backspace=indent,eol,start
 
 " visual goodies
 set ruler
@@ -21,26 +22,13 @@ set ignorecase
 set smartcase
 
 "keep stuff clean
-set noswapfile
-set nobackup
-set nowb
+set backupdir=~/.vim/tmp,.
+set directory=~/.vim/tmp,.
 
-" Quick PDF preview of a LaTex document 
-map <silent> <Leader>pdf :!pdflatex %; open -a Preview %:r.pdf<CR><CR>
-
-" Run the current file through python3 
 map <silent> <Leader>][ :!python3 %<CR>
-
-" HTML preview in Safari 
 map <silent> <Leader>s :!open -a Safari %<CR><CR>
-
-" Spellcheck (awesome)
-" setlocal spell spelllang=en_us
-
-" Break lines at word boundries 
+setlocal spelllang=en_us
 set linebreak 
-
-" Save with double tape of Shift-s
 map SS :w<CR>
-
 map Q :q!<CR> 
+command Prose set fo+=t1 | set tw=75 | set spell 
