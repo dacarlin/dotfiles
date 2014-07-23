@@ -15,8 +15,8 @@ export ep=carlin@epiphany.genomecenter.ucdavis.edu
 export otis=carlin@otis.genomecenter.ucdavis.edu
 
 case "$( uname )" in 
-  Linux) export r=/home/carlin/Rosetta ;;
-  Darwin) export r=/Applications/Rosetta ;;
+  Linux) export r=/home/carlin/Rosetta && export b=linuxgcc ;;
+  Darwin) export r=/Applications/Rosetta && export b=macosclang ;;
 esac 
 export rbin=$r/main/source/bin
 export ROSETTA3_DB=$r/main/database
@@ -29,3 +29,4 @@ tr() { mv "$@" ~/.Trash/; }
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias s="git status"
 alias f="open -a Finder"
+alias ll="ls -halFG"
