@@ -24,3 +24,8 @@ alias showme14, \
   set sphere_scale, 0.681 \
   hide spheres \ 
   show spheres, sele
+
+alias go, \ 
+  showme14 \
+  save around.pdb, sele \
+  quit 
