@@ -34,10 +34,9 @@ alias ll="ls -halFG"
 export PATH=$PATH:/Applications/MacPyMOL.app/Contents/MacOS
 
 dd() {
-  base="$( pwd | rev | cut -d'/' -f1 | rev )"
-  awk '/^ATOM/ { print $6, $4 }' "${base}"-"$@"-HIS.pdb | uniq > t1
-  awk '/^ATOM/ { print $6, $4 }' "${base}"-for-design.pdb | uniq > t2
-  echo "$@" "    wt"
+  awk '/^ATOM/ { print $6, $4 }' $1 | uniq > t1
+  awk '/^ATOM/ { print $6, $4 }' $2 | uniq > t2
+  echo $1 $2
   echo "------------------"
-  comm -3 t1 t2 | tee >(wc -l)
+  comm -3 t1 t2 | awk '{ print } END { print NR/2, "total mutations" }'
 }
