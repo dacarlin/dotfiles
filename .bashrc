@@ -9,6 +9,7 @@ alias lab="ssh alex@dhcp28-gc4.genomecenter.ucdavis.edu"
 alias otis="ssh carlin@otis.genomecenter.ucdavis.edu"
 alias air="" # a man can dream...
 alias q=qstat
+alias qa="qstat -u \*"
 
 export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
 export ep=carlin@epiphany.genomecenter.ucdavis.edu
@@ -23,9 +24,9 @@ export ROSETTA3_DB=$r/main/database
 export rpy=$r/main/source/src/python/apps/public
 export PATH=/usr/local/bin:$PATH:$rbin:$rpy:~/bin
 
-# alias pymol="open -a MacPyMOL"
+alias pymol="open -a MacPyMOL"
 alias cp="cp -i"
-tr() { mv "$@" ~/.Trash/; }
+trash() { mv "$@" ~/.Trash/; }
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias s="git status"
 alias f="open -a Finder"
@@ -34,9 +35,27 @@ alias ll="ls -halFG"
 export PATH=$PATH:/Applications/MacPyMOL.app/Contents/MacOS
 
 dd() {
+  # dumb diff for PDBs
   awk '/^ATOM/ { print $6, $4 }' $1 | uniq > t1
   awk '/^ATOM/ { print $6, $4 }' $2 | uniq > t2
   echo $1 $2
   echo "------------------"
   comm -3 t1 t2 | awk '{ print } END { print NR/2, "total mutations" }'
 }
+
+sdd() {
+  # super dumb diff for PDBs
+  awk '/^ATOM/ { print $6, $4 }' $1 | uniq > t1
+  awk '/^ATOM/ { print $6, $4 }' $2 | uniq > t2
+  echo $1
+  echo $2
+  comm -3 t1 t2 | paste -d' ' - - | cut -d' ' -f2- | tr -d "\t " | gpaste -d+ -s | tr A-Z a-z
+}
+
+sd() { # smart diff 
+  python $rpy/pdb2fasta.py $1 | tail -n +2 | fold -w1 > t1
+  python $rpy/pdb2fasta.py $2 | tail -n +2 | fold -w1 > t2
+  comm -3 t1 t2 
+}
+
+uno() { python3 ~/Documents/mo/321.py "$@" ; }
