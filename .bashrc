@@ -34,23 +34,27 @@ alias ll="ls -halFG"
 
 export PATH=$PATH:/Applications/MacPyMOL.app/Contents/MacOS
 
-dd() {
-  # dumb diff for PDBs
-  awk '/^ATOM/ { print $6, $4 }' $1 | uniq > t1
-  awk '/^ATOM/ { print $6, $4 }' $2 | uniq > t2
-  echo $1 $2
-  echo "------------------"
-  comm -3 t1 t2 | awk '{ print } END { print NR/2, "total mutations" }'
-}
-
-sdd() {
+diff-pdb() {
   # super dumb diff for PDBs
   awk '/^ATOM/ { print $6, $4 }' $1 | uniq > t1
   awk '/^ATOM/ { print $6, $4 }' $2 | uniq > t2
-  echo $1
-  echo $2
-  comm -3 t1 t2 | paste -d' ' - - | cut -d' ' -f2- | tr -d "\t " | gpaste -d+ -s | tr A-Z a-z
+  comm -3 t1 t2 | gpaste -d' ' - - | cut -d' ' -f2- |\
+    tr -d "\t " | gpaste -d+ -s | tr A-Z a-z
+  rm t1 t2 
 }
+
+diff-for-pymol() { 
+  echo load $2 > t.pml
+  echo clean >> t.pml
+  printf "select mutated, resi '$( diff-pdb "$@" | tr -d a-z )'\n" >> t.pml
+  echo show sticks, mutated >> t.pml
+  echo orient mutated >> t.pml
+  echo 'label mutated and n. ca, resn + " " + resi' >> t.pml
+  MacPyMOL t.pml
+  rm t.pml
+}
+
+dd() { diff-pdb "$@" && diff-for-pymol "$@" ; } 
 
 sd() { # smart diff 
   python $rpy/pdb2fasta.py $1 | tail -n +2 | fold -w1 > t1
