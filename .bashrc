@@ -1,5 +1,4 @@
 bind 'TAB:menu-complete'
-export $EDITOR=vim
 export PS1='\[\033[0;37m\]\n\d \t \w\[\033[0m\]\n\u@\h$ '
 #ugly, right? Gives a light gray prompt with date, time, and wd
 export HISTSIZE=10000
