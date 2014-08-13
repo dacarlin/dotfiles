@@ -1,19 +1,24 @@
 bind 'TAB:menu-complete'
+export $EDITOR=vim
 export PS1='\[\033[0;37m\]\n\d \t \w\[\033[0m\]\n\u@\h$ '
 #ugly, right? Gives a light gray prompt with date, time, and wd
 export HISTSIZE=10000
 export PYTHONSTARTUP=~/.pythonrc
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 alias ep="ssh carlin@epiphany.genomecenter.ucdavis.edu"
 alias lab="ssh alex@dhcp28-gc4.genomecenter.ucdavis.edu"
 alias otis="ssh carlin@otis.genomecenter.ucdavis.edu"
 alias air="" # a man can dream...
+alias wou="ssh wouferton.com@s45900.gridserver.com"
 alias q=qstat
 alias qa="qstat -u \*"
 
 export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu
 export ep=carlin@epiphany.genomecenter.ucdavis.edu
 export otis=carlin@otis.genomecenter.ucdavis.edu
+export wou=wouferton.com@s45900.gridserver.com
 
 case "$( uname )" in 
   Linux) export r=/home/carlin/Rosetta && export b=linuxgcc ;;
