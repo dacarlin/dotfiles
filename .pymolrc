@@ -1,16 +1,33 @@
-set fetch_path, /Users/alex/Downloads
+set fetch_path, ~/Downloads
+set float_labels, 1
+
+alias f, full
 
 alias clean, \
-  remove hydrogens; \
-  remove solvent; \
+  remove hydrogens \
+  remove solvent \
   show sticks, organic
 
+alias __, \
+  set label_font_id, 7 \
+  clean \
+  orient r
+
+alias pywk, \
+  show sticks, r \
+  label r and name ca, "%s%s" % (resn,resi) 
+
+alias ribs, \
+  clean \
+  hide everything \
+  show ribbon
+
 alias spiff, \ 
-  set ray_trace_mode, 3; \
-  set shininess, 0.67; \
-  set ray_trace_fog, 0; \
-  set ray_shadows, 0; \
-  set depth_cue, 0; \ 
+  set ray_trace_mode, 3 \
+  set shininess, 0.67 \
+  set ray_trace_fog, 0 \
+  set ray_shadows, 0 \
+  set depth_cue, 0 \ 
   bg_color white 
 
 alias showme12, \ 
