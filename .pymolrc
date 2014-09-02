@@ -1,4 +1,4 @@
-set fetch_path, ~/Downloads
+set fetch_path, /Users/alex/Downloads
 set float_labels, 1
 
 alias f, full
@@ -9,13 +9,13 @@ alias clean, \
   show sticks, organic
 
 alias __, \
-  set label_font_id, 7 \
   clean \
   orient r
 
 alias pywk, \
-  show sticks, r \
-  label r and name ca, "%s%s" % (resn,resi) 
+  # show sticks, r \
+  label r and name ca, "%s%s" % (resn,resi) \
+  set label_font_id, 7 
 
 alias ribs, \
   clean \

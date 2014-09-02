@@ -27,20 +27,31 @@ export PATH=/usr/local/bin:$PATH:$rbin:$rpy:~/bin
 trash() { mv "$@" ~/.Trash/ ;}
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias s="git status"
-alias f="open -a Finder"
+alias f="open -a Finder ." 
 alias ll="ls -halFG"
 
 #two liners
 pawk() { 
   awk '/^AT.*CA/ && NR==FNR {a[$6]=$4;next} /^AT.*CA/ && $4!=a[$6] {
-  print $4 $6 a[$6]}' $1 $2 | gpaste -s -d+ | tr A-Z a-z
+  print a[$6] $6 $4 }' $1 $2 | gpaste -s -d+ | tr A-Z a-z | tee >(pbcopy)
+  echo Comparison copied to clipboard
 }
 
 pywk() { 
   r=$( pawk $1 $2 | tr -d a-z )
-  MacPyMOL $1 -d "sele r, resi $r; pywk" $2 -d "__" >>/dev/null 2>&1 &
+  MacPyMOL $2 -d "sele r, resi $r; pywk" $1 -d "__" >>/dev/null 2>&1 &
 }
 
 #pymol
 alias pymol="open -a MacPyMOL"
 export PATH=$PATH:/Applications/MacPyMOL.app/Contents/MacOS
+pm() { MacPyMOL "$@" >>/dev/null 2>&1 & }
+
+#reminders 
+mind() { 
+  if [[ $# < 1 ]]; then
+    cat ~/.minders 
+  else
+    echo "$( date '+%Y-%m-%d %H:%M:%S' )" "$@" >> ~/.minders
+  fi
+}
