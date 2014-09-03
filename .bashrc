@@ -11,7 +11,7 @@ export wou=wouferton.com@s45900.gridserver.com && alias wou="ssh $wou"
 
 #epiphany
 qa() { qstat -u \* ;}
-q() { qa | awk '{print $4}' | uniq -c ;}
+q() { qa | awk '{print $4}' | sort | uniq -c ;}
 
 #rosetta
 case "$( uname )" in 
