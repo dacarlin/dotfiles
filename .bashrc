@@ -16,7 +16,7 @@ q() { qa | awk '{print $4}' | sort | uniq -c ;}
 #rosetta
 case "$( uname )" in 
   Linux) export r=/home/carlin/Rosetta && export b=linuxgcc ;;
-  Darwin) export r=/Applications/Rosetta && export b=macosclang ;;
+  Darwin) export r=~/Applications/Rosetta && export b=macosclang ;;
 esac 
 export rbin=$r/main/source/bin
 export ROSETTA3_DB=$r/main/database
