@@ -29,6 +29,7 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias s="git status"
 alias f="open -a Finder ." 
 alias ll="ls -halFG"
+day() { date '+%Y-%m-%D' ;}
 
 #two liners
 pawk() { 

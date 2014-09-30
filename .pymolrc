@@ -1,3 +1,6 @@
+run /Applications/Rosetta/main/source/src/python/bindings/PyMOLPyRosettaServer.py
+run /Users/alex/Documents/useful-functions.py
+
 set fetch_path, /Users/alex/Downloads
 set float_labels, 1
 
@@ -21,6 +24,13 @@ alias ribs, \
   clean \
   hide everything \
   show ribbon
+
+alias lines-around-metal, \
+  hide everything, \
+  show ribbon, \ 
+  set sphere_scale, 0.15 \
+  show spheres, elem fe, \
+  show lines, br. elem fe around 8
 
 alias spiff, \ 
   set ray_trace_mode, 3 \
