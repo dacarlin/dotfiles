@@ -1,5 +1,6 @@
 run /Applications/Rosetta/main/source/src/python/bindings/PyMOLPyRosettaServer.py
 run /Users/alex/Documents/useful-functions.py
+run /Users/alex/Applications/PyRosetta.MacOSX.Lion.64Bit.namespace.mode=release.branch=devel-r57244/PyMOLPyRosettaServer.py 
 
 set fetch_path, /Users/alex/Downloads
 set float_labels, 1

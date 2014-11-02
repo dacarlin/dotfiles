@@ -1,5 +1,5 @@
 #alex's .bashrc
-export PS1='\[\033[0;37m\]\n\d \t \w\[\033[0m\]\n\u@\h$ '
+export PS1='\[\033[0;37m\]\n\d \t \w (\j)\[\033[0m\]\n\u@\h$ '
 export HISTSIZE=10000
 bind 'TAB:menu-complete'
 
@@ -56,3 +56,5 @@ mind() {
     echo "$( date '+%Y-%m-%d %H:%M:%S' )" "$@" >> ~/.minders
   fi
 }
+#source /Users/alex/Applications/PyRosetta.MacOSX.Lion.64Bit.namespace.mode=release.branch=devel-r57244/SetPyRosettaEnvironment.sh
+export PYTHONSTARTUP=~/.pythonrc
