@@ -15,21 +15,22 @@ q() { qa | awk '{print $4}' | sort | uniq -c ;}
 
 #rosetta
 case "$( uname )" in 
-  Linux) export r=/home/carlin/Rosetta && export b=linuxgcc ;;
-  Darwin) export r=~/Applications/Rosetta && export b=macosclang ;;
+  Linux) export r=/share/archive2/siegellab/Rosetta ;;
+  Darwin) export r=~/Applications/Rosetta ;;
 esac 
 export rbin=$r/main/source/bin
 export ROSETTA3_DB=$r/main/database
 export rpy=$r/main/source/src/python/apps/public
-export PATH=/usr/local/bin:$PATH:$rbin:$rpy:~/bin
+export PATH=/usr/local/bin:$PATH:$rbin:$rpy
 
 #one liners
 trash() { mv "$@" ~/.Trash/ ;}
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias s="git status"
 alias f="open -a Finder ." 
-alias ll="ls -halFG"
-day() { date '+%Y-%m-%D' ;}
+#alias ll="ls -halFG"
+ll() { ls -halFGt | tail +2 | cut -c 30- ;}
+today() { date '+%Y-%m-%D' ;}
 
 #two liners
 pawk() { 
@@ -56,5 +57,6 @@ mind() {
     echo "$( date '+%Y-%m-%d %H:%M:%S' )" "$@" >> ~/.minders
   fi
 }
-#source /Users/alex/Applications/PyRosetta.MacOSX.Lion.64Bit.namespace.mode=release.branch=devel-r57244/SetPyRosettaEnvironment.sh
+
+#python
 export PYTHONSTARTUP=~/.pythonrc

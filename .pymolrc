@@ -1,16 +1,27 @@
-run /Applications/Rosetta/main/source/src/python/bindings/PyMOLPyRosettaServer.py
+run ~/Applications/Rosetta/main/source/src/python/bindings/PyMOLPyRosettaServer.py
 run /Users/alex/Documents/useful-functions.py
-run /Users/alex/Applications/PyRosetta.MacOSX.Lion.64Bit.namespace.mode=release.branch=devel-r57244/PyMOLPyRosettaServer.py 
 
 set fetch_path, /Users/alex/Downloads
 set float_labels, 1
-
-alias f, full
+set ribbon_side_chain_helper, 1
+set cartoon_side_chain_helper, 1
 
 alias clean, \
   remove hydrogens \
   remove solvent \
   show sticks, organic
+
+alias or, \ 
+  select c19, /////C19 \
+  select c20, /////C20 \
+  select c21, /////C21 \
+  select c1, ///Y//C1 \
+  select c2, ///Y//C2 \
+  select o1, ///Y//O1 \
+  distance d, c1, c19 \
+  angle a, c20, c19, c1 \
+  angle b, o1, c1, c19 \
+  dihedral ab, c20, c19, o1, c1
 
 alias __, \
   clean \
@@ -22,9 +33,9 @@ alias pywk, \
   set label_font_id, 7 
 
 alias ribs, \
-  clean \
   hide everything \
-  show ribbon
+  show ribbon \
+  clean 
 
 alias lines-around-metal, \
   hide everything, \
@@ -32,28 +43,3 @@ alias lines-around-metal, \
   set sphere_scale, 0.15 \
   show spheres, elem fe, \
   show lines, br. elem fe around 8
-
-alias spiff, \ 
-  set ray_trace_mode, 3 \
-  set shininess, 0.67 \
-  set ray_trace_fog, 0 \
-  set ray_shadows, 0 \
-  set depth_cue, 0 \ 
-  bg_color white 
-
-alias showme12, \ 
-  sele /////C19 around 12 and /////CA \
-  set sphere_scale, 0.681 \
-  hide spheres \
-  show spheres, sele
-
-alias showme14, \ 
-  sele /////C19 around 14 and /////CA \
-  set sphere_scale, 0.681 \
-  hide spheres \ 
-  show spheres, sele
-
-alias go, \ 
-  showme14 \
-  save around.pdb, sele \
-  quit 
