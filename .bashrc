@@ -35,7 +35,6 @@ day() { date '+%Y-%m-%D' ;}
 pawk() { 
   awk '/^AT.*CA/ && NR==FNR {a[$6]=$4;next} /^AT.*CA/ && $4!=a[$6] {
   print a[$6] $6 $4 }' $1 $2 | gpaste -s -d+ | tr A-Z a-z | tee >(pbcopy)
-  echo Comparison copied to clipboard
 }
 
 pywk() { 
@@ -56,5 +55,7 @@ mind() {
     echo "$( date '+%Y-%m-%d %H:%M:%S' )" "$@" >> ~/.minders
   fi
 }
-#source /Users/alex/Applications/PyRosetta.MacOSX.Lion.64Bit.namespace.mode=release.branch=devel-r57244/SetPyRosettaEnvironment.sh
+
+#python
 export PYTHONSTARTUP=~/.pythonrc
+export PYTHONDONTWRITEBYTECODE=1
