@@ -44,8 +44,8 @@ pywk() {
 }
 
 #pymol
-alias pymol="open -a MacPyMOL"
 export PATH=$PATH:/Applications/MacPyMOL.app/Contents/MacOS
+alias pymol=/Applications/MacPyMOL.app/Contents/MacOS/MacPyMOL
 pm() { MacPyMOL "$@" >>/dev/null 2>&1 & }
 
 #reminders 
