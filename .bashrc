@@ -4,7 +4,7 @@ export HISTSIZE=10000
 bind 'TAB:menu-complete'
 
 #ssh
-export lab=alex@dhcp28-gc4.genomecenter.ucdavis.edu && alias lab="ssh $lab"
+export lab=alex@128.120.136.234 && alias lab="ssh $lab"
 export ep=carlin@epiphany.genomecenter.ucdavis.edu && alias ep="ssh $ep"
 export otis=carlin@otis.genomecenter.ucdavis.edu && alias otis="ssh $otis"
 export wou=wouferton.com@s45900.gridserver.com && alias wou="ssh $wou"
