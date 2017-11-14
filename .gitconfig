@@ -1,4 +1,0 @@
-git config --global user.name "Alex Carlin"
-git config --global user.email "carlin@ucdavis.edu"  
-git config --global core.editor vim
-git config --global color.ui true
