@@ -1,4 +1,8 @@
-dotfiles
-========
+Alex's dot files
+================
 
-Configuration files for vim, bash, and others.
+Configuration files for 
+
+- vim (`.vimrc`) 
+- PyMOL (`.pymolrc`) 
+- bash (`.bashrc`) 
