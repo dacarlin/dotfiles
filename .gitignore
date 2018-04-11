@@ -1,4 +1,0 @@
-# Globally ignore the following
-*.pyo
-*.pyc
-__pycache__
