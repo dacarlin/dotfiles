@@ -1,8 +1,10 @@
 Alex's dot files
 ================
 
-Configuration files for 
+Configuration files for: 
 
-- vim (`.vimrc`) 
+- Vim (`.vimrc`) 
 - PyMOL (`.pymolrc`) 
-- bash (`.bashrc`) 
+- Bash (`.bashrc`) 
+- Z shell (`.zprofile`), which is now default on macOS 
+- Tmux (`tmux.conf`) 
