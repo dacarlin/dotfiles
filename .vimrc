@@ -4,6 +4,9 @@
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
+" Allow backspace in insert mode 
+set backspace=indent,eol,start
+
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
 

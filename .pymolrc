@@ -1,0 +1,7 @@
+set ray_shadow, 0 
+set cartoon_side_chain_helper, 1 
+set fetch_path, /Users/alex/Downloads 
+ 
+run /Users/alex/Documents/pymol-powerpack/commands.py
+
+
